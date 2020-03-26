@@ -1,6 +1,6 @@
 <template>
   <div class="goods">
-    <goods-list-item  v-for="(item , index) in goods" :goods-item="item"/>
+      <goods-list-item  v-for="(item , index) in goods" :goods-item="item"/>
   </div>
 </template>
 
@@ -30,6 +30,7 @@
     padding: 0 3px;
     display: flex;
     flex-wrap: wrap;
-    /*align-content: flex-start;*/
   }
+
+
 </style>

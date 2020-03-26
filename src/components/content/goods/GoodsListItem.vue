@@ -1,6 +1,14 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-03-18 15:30:44
+ * @LastEditTime: 2020-03-24 18:33:28
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vueclic:\Users\Administrator\Desktop\vue\shopv\src\components\content\goods\GoodsListItem.vue
+ -->
 <template>
   <div class="goods-item">
-      <img :src="goodsItem.show.img">
+      <img :src="goodsItem.show.img" @load="imageLoad" @click="itemClick">
       <div class="goods-info">
         <p>{{goodsItem.title}}</p>
         <span class="price">{{goodsItem.price}}</span>
@@ -22,7 +30,15 @@
               return Object;
             }
           }
+        },
+      methods:{
+        imageLoad(){
+          this.$bus.$emit('itemImageLoad');
+        },
+        itemClick(){
+          this.$router.push('/detail/'+ this.goodsItem.iid);
         }
+      }
     }
 </script>
 

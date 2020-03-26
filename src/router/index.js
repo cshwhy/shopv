@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-03-17 14:11:06
+ * @LastEditTime: 2020-03-24 18:38:03
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \vueclic:\Users\Administrator\Desktop\vue\shopv\src\router\index.js
+ */
 import Vue from 'vue'
 import VueRouter from  'vue-router'
 
@@ -21,6 +29,10 @@ const routes = [
     {
         path:'/profile',
         component:() =>import('../views/profile/Profile')
+    },
+    {
+        path:'/detail/:iid',
+        component:() =>import('../views/detail/Detail')
     },
 ];
 const router = new VueRouter({
